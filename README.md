@@ -1,120 +1,135 @@
 # cn-ecommerce-api
-Node.js Ecommerce API
+
+# Node.js Ecommerce API
+
 This is a Node.js Ecommerce API that allows you to manage products in a database. The API provides endpoints for adding, listing, deleting, and updating product quantities.
 
-Getting Started
+## Getting Started
+
 To get started with this API, follow the steps below:
 
-Clone this repository to your local machine
-Install dependencies by running npm install
-Start the server by running npm start
-The server will be running on http://localhost:3000
-Endpoints
-Add Products
+1. Clone this repository to your local machine
+2. Install dependencies by running `npm install`
+3. Start the server by running `npm start`
+4. The server will be running on `http://localhost:3000`
+
+## Endpoints
+
+### Add Products
+
 Adds a new product to the database.
 
-URL
+**URL**
 
-POST /products/create
+`POST /products/create`
 
-Request Body
-
-json
-Copy code
+**Request Body**
 {
-    "name": "Product Name",
-    "description": "Product Description",
-    "price": 10.99,
-    "quantity": 100
+"name": "Product Name",
+"description": "Product Description",
+"price": 10.99,
+"quantity": 100
 }
-Response
-
-json
-Copy code
+**Response**
 {
-    "message": "Product created successfully",
-    "data": {
-        "id": "1234567890",
-        "name": "Product Name",
-        "description": "Product Description",
-        "price": 10.99,
-        "quantity": 100
-    }
+"message": "Product created successfully",
+"data": {
+"id": "1234567890",
+"name": "Product Name",
+"description": "Product Description",
+"price": 10.99,
+"quantity": 100
 }
-List Products
+}
+### List Products
+
 Returns a list of all products in the database.
 
-URL
+**URL**
 
-GET /products
+`GET /products`
 
-Response
+**Response**
 {
-    "message": "Products listed successfully",
-    "data": [
-        {
-            "id": "1234567890",
-            "name": "Product Name",
-            "description": "Product Description",
-            "price": 10.99,
-            "quantity": 100
-        },
-        {
-            "id": "0987654321",
-            "name": "Another Product",
-            "description": "Another Product Description",
-            "price": 19.99,
-            "quantity": 50
-        }
-    ]
+"message": "Products listed successfully",
+"data": [
+{
+"id": "1234567890",
+"name": "Product Name",
+"description": "Product Description",
+"price": 10.99,
+"quantity": 100
+},
+{
+"id": "0987654321",
+"name": "Another Product",
+"description": "Another Product Description",
+"price": 19.99,
+"quantity": 50
 }
-Delete Products
+]
+}
+
+### Delete Products
+
 Deletes a product from the database.
 
-URL
+**URL**
 
-DELETE /products/:id
+`DELETE /products/:id`
 
-Response
+**Response**
+
+### Delete Products
+
+Deletes a product from the database.
+
+**URL**
+
+`DELETE /products/:id`
+
+**Response**
 {
-    "message": "Product deleted successfully",
-    "data": {
-        "id": "1234567890",
-        "name": "Product Name",
-        "description": "Product Description",
-        "price": 10.99,
-        "quantity": 100
-    }
+"message": "Product deleted successfully",
+"data": {
+"id": "1234567890",
+"name": "Product Name",
+"description": "Product Description",
+"price": 10.99,
+"quantity": 100
 }
+}
+### Update Product Quantity
 
-Update Product Quantity
 Updates the quantity of a product in the database.
-POST /products/:id/update_quantity/?number=10
 
-Request Parameters
+**URL**
 
-id: The ID of the product to update.
-number: The number to add to the current quantity. Use a negative number to decrement the quantity.
-Response
+`POST /products/:id/update_quantity/?number=10`
 
+**Request Parameters**
 
+- `id`: The ID of the product to update.
+- `number`: The number to add to the current quantity. Use a negative number to decrement the quantity.
+
+**Response**
 {
-    "message": "Product quantity updated successfully",
-    "data": {
-        "id": "1234567890",
-        "name": "Product Name",
-        "description": "Product Description",
-        "price": 10.99,
-        "quantity": 110
-    }
+"message": "Product quantity updated successfully",
+"data": {
+"id": "1234567890",
+"name": "Product Name",
+"description": "Product Description",
+"price": 10.99,
+"quantity": 110
 }
-Error Responses
+}
+## Error Responses
+
 If an error occurs, the API will respond with an error message and an appropriate status code.
-
-json
-Copy code
 {
-    "error": "Error message"
+"error": "Error message"
 }
-Conclusion
+
+## Conclusion
+
 This Node.js Ecommerce API provides a simple way to manage products in a database. You can use it to add, list, delete, and update product quantities with ease.
