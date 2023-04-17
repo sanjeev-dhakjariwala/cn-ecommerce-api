@@ -24,13 +24,16 @@ Adds a new product to the database.
 `POST /products/create`
 
 **Request Body**
+```
 {
 "name": "Product Name",
 "description": "Product Description",
 "price": 10.99,
 "quantity": 100
 }
+```
 **Response**
+```
 {
 "message": "Product created successfully",
 "data": {
@@ -41,6 +44,7 @@ Adds a new product to the database.
 "quantity": 100
 }
 }
+```
 ### List Products
 
 Returns a list of all products in the database.
@@ -50,6 +54,7 @@ Returns a list of all products in the database.
 `GET /products`
 
 **Response**
+```
 {
 "message": "Products listed successfully",
 "data": [
@@ -69,7 +74,7 @@ Returns a list of all products in the database.
 }
 ]
 }
-
+```
 ### Delete Products
 
 Deletes a product from the database.
@@ -89,6 +94,7 @@ Deletes a product from the database.
 `DELETE /products/:id`
 
 **Response**
+```
 {
 "message": "Product deleted successfully",
 "data": {
@@ -99,6 +105,7 @@ Deletes a product from the database.
 "quantity": 100
 }
 }
+```
 ### Update Product Quantity
 
 Updates the quantity of a product in the database.
@@ -113,6 +120,7 @@ Updates the quantity of a product in the database.
 - `number`: The number to add to the current quantity. Use a negative number to decrement the quantity.
 
 **Response**
+```
 {
 "message": "Product quantity updated successfully",
 "data": {
@@ -123,6 +131,7 @@ Updates the quantity of a product in the database.
 "quantity": 110
 }
 }
+```
 ## Error Responses
 
 If an error occurs, the API will respond with an error message and an appropriate status code.
