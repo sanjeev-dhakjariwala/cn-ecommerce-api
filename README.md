@@ -26,23 +26,23 @@ Adds a new product to the database.
 **Request Body**
 ```
 {
-"name": "Product Name",
-"description": "Product Description",
-"price": 10.99,
-"quantity": 100
+    "name": "Product Name",
+    "description": "Product Description",
+    "price": 10.99,
+    "quantity": 100
 }
 ```
 **Response**
 ```
 {
-"message": "Product created successfully",
-"data": {
-"id": "1234567890",
-"name": "Product Name",
-"description": "Product Description",
-"price": 10.99,
-"quantity": 100
-}
+    "message": "Product created successfully",
+    "data": {
+        "id": "1234567890",
+        "name": "Product Name",
+        "description": "Product Description",
+        "price": 10.99,
+        "quantity": 100
+    }
 }
 ```
 ### List Products
@@ -56,23 +56,23 @@ Returns a list of all products in the database.
 **Response**
 ```
 {
-"message": "Products listed successfully",
-"data": [
-{
-"id": "1234567890",
-"name": "Product Name",
-"description": "Product Description",
-"price": 10.99,
-"quantity": 100
-},
-{
-"id": "0987654321",
-"name": "Another Product",
-"description": "Another Product Description",
-"price": 19.99,
-"quantity": 50
-}
-]
+    "message": "Products listed successfully",
+    "data": [
+        {
+            "id": "1234567890",
+            "name": "Product Name",
+            "description": "Product Description",
+            "price": 10.99,
+            "quantity": 100
+        },
+        {
+            "id": "0987654321",
+            "name": "Another Product",
+            "description": "Another Product Description",
+            "price": 19.99,
+            "quantity": 50
+        }
+    ]
 }
 ```
 ### Delete Products
@@ -96,14 +96,14 @@ Deletes a product from the database.
 **Response**
 ```
 {
-"message": "Product deleted successfully",
-"data": {
-"id": "1234567890",
-"name": "Product Name",
-"description": "Product Description",
-"price": 10.99,
-"quantity": 100
-}
+    "message": "Product deleted successfully",
+    "data": {
+        "id": "1234567890",
+        "name": "Product Name",
+        "description": "Product Description",
+        "price": 10.99,
+        "quantity": 100
+    }
 }
 ```
 ### Update Product Quantity
@@ -122,14 +122,14 @@ Updates the quantity of a product in the database.
 **Response**
 ```
 {
-"message": "Product quantity updated successfully",
-"data": {
-"id": "1234567890",
-"name": "Product Name",
-"description": "Product Description",
-"price": 10.99,
-"quantity": 110
-}
+    "message": "Product quantity updated successfully",
+    "data": {
+        "id": "1234567890",
+        "name": "Product Name",
+        "description": "Product Description",
+        "price": 10.99,
+        "quantity": 110
+    }
 }
 ```
 ## Error Responses
