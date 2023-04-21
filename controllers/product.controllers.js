@@ -66,9 +66,9 @@ const updateProduct = async (req, res) => {
   console.log(req.body);
   const quantity = parseInt(req.body.quantity);
   const id = req.body.id;
-  if (quantity) {
-    const product = await Product.findById(id);
-    console.log(id);
+  const product = await Product.findById(id);
+  console.log(id);
+  if (product) {
     product.quantity = parseInt(product.quantity) + quantity;
     await Product.findByIdAndUpdate(id, product);
     res.send({
