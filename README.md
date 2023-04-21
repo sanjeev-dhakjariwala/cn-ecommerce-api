@@ -11,7 +11,7 @@ To get started with this API, follow the steps below:
 1. Clone this repository to your local machine
 2. Install dependencies by running `npm install`
 3. Start the server by running `npm start`
-4. The server will be running on `http://localhost:3000`
+4. The server will be running on `http://localhost:5001`
 
 ## Endpoints
 
