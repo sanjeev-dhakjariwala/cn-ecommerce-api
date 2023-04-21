@@ -27,8 +27,6 @@ Adds a new product to the database.
 ```
 {
     "name": "Product Name",
-    "description": "Product Description",
-    "price": 10.99,
     "quantity": 100
 }
 ```
@@ -39,8 +37,6 @@ Adds a new product to the database.
     "data": {
         "id": "1234567890",
         "name": "Product Name",
-        "description": "Product Description",
-        "price": 10.99,
         "quantity": 100
     }
 }
@@ -61,15 +57,11 @@ Returns a list of all products in the database.
         {
             "id": "1234567890",
             "name": "Product Name",
-            "description": "Product Description",
-            "price": 10.99,
             "quantity": 100
         },
         {
             "id": "0987654321",
             "name": "Another Product",
-            "description": "Another Product Description",
-            "price": 19.99,
             "quantity": 50
         }
     ]
@@ -100,8 +92,6 @@ Deletes a product from the database.
     "data": {
         "id": "1234567890",
         "name": "Product Name",
-        "description": "Product Description",
-        "price": 10.99,
         "quantity": 100
     }
 }
@@ -126,8 +116,6 @@ Updates the quantity of a product in the database.
     "data": {
         "id": "1234567890",
         "name": "Product Name",
-        "description": "Product Description",
-        "price": 10.99,
         "quantity": 110
     }
 }
