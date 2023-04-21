@@ -7,9 +7,9 @@ const createProduct = async (req, res) => {
   if (body) {
     const addProduct = await Product.create(body);
     res.status(200).send({
+      sucess: true,
+      message: "Product added successfully",
       data: {
-        sucess: true,
-        message: "Product added successfully",
         product: {
           name: body.name,
           quantity: body.quantity,
@@ -28,8 +28,8 @@ const getProduct = async (req, res) => {
   const products = await Product.find();
   if (products) {
     res.send({
+      success: true,
       data: {
-        success: true,
         products,
       },
     });
@@ -47,15 +47,15 @@ const deleteProduct = async (req, res) => {
 
   if (product) {
     res.send({
+      success: true,
       data: {
-        success: true,
         product,
       },
     });
   } else {
     res.send({
       success: false,
-      message: "Give proper id",
+      message: "Give correct id",
     });
   }
 };
@@ -63,27 +63,25 @@ const deleteProduct = async (req, res) => {
 //update product quantity
 
 const updateProduct = async (req, res) => {
-    console.log(req.body);
+  console.log(req.body);
   const quantity = parseInt(req.body.quantity);
   const id = req.body.id;
   if (quantity) {
     const product = await Product.findById(id);
     console.log(id);
     product.quantity = parseInt(product.quantity) + quantity;
-    await Product.findByIdAndUpdate(id,product);
+    await Product.findByIdAndUpdate(id, product);
     res.send({
+      success: true,
+      message: "Product updated Successfully",
       data: {
-        success: true,
-        message: "Product updated Successfully",
         product,
       },
     });
   } else {
     res.send({
-      data: {
-        success: false,
-        message: "Product not found",
-      },
+      success: false,
+      message: "Product not found",
     });
   }
 };
