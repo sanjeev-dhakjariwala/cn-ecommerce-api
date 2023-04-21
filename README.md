@@ -68,15 +68,6 @@ Returns a list of all products in the database.
     ]
 }
 ```
-### Delete Products
-
-Deletes a product from the database.
-
-**URL**
-
-`DELETE /products/:id`
-
-**Response**
 
 ### Delete Products
 
