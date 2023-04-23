@@ -1,4 +1,5 @@
 const Product = require("../model/Products");
+const asyncHandler = require("express-async-handler");
 
 //Adding product
 const createProduct = async (req, res) => {
@@ -62,11 +63,12 @@ const deleteProduct = async (req, res) => {
 
 //update product quantity
 
-const updateProduct = async (req, res) => {
+const updateProduct = asyncHandler(async (req, res) => {
   console.log(req.body);
   const quantity = parseInt(req.body.quantity);
   const id = req.body.id;
   const product = await Product.findById(id);
+  console.log(product);
   console.log(id);
   if (product) {
     product.quantity = parseInt(product.quantity) + quantity;
@@ -79,12 +81,10 @@ const updateProduct = async (req, res) => {
       },
     });
   } else {
-    res.status(404).send({
-      success: false,
-      message: "Product not found",
-    });
+    res.status(404);
+    throw new Error('Product not found');
   }
-};
+});
 module.exports = {
   createProduct,
   getProduct,
