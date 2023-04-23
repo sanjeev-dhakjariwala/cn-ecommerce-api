@@ -17,7 +17,7 @@ const createProduct = async (req, res) => {
       },
     });
   } else {
-    res.status(200).send({
+    res.status(404).send({
       success: false,
       message: "Enter product details",
     });
@@ -34,7 +34,7 @@ const getProduct = async (req, res) => {
       },
     });
   } else {
-    res.send({
+    res.status(404).send({
       success: false,
       message: "No Products found",
     });
@@ -53,7 +53,7 @@ const deleteProduct = async (req, res) => {
       },
     });
   } else {
-    res.send({
+    res.status(404).send({
       success: false,
       message: "Give correct id",
     });
@@ -79,7 +79,7 @@ const updateProduct = async (req, res) => {
       },
     });
   } else {
-    res.send({
+    res.status(404).send({
       success: false,
       message: "Product not found",
     });
